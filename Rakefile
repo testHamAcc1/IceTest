@@ -1,5 +1,6 @@
 require "cucumber"
 require "cucumber/rake/task"
+require "yaml"
 
 namespace :features do
   Cucumber::Rake::Task.new(:fast) do |t|
