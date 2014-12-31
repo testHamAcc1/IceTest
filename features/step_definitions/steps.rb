@@ -1,5 +1,5 @@
 Given(/^User lands on homepage$/) do
-  visit('C:\Users\IEUser\Documents\IceTest-master\html\index.html')
+  visit('C:\Users\IEUser\Documents\git_workspace\html\index.html')
   page.has_xpath?("html/body/form/center/input[2]")
 end
 
