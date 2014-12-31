@@ -1,3 +1,4 @@
+@slow
 Feature: As a user I want to login in the application
   
 Scenario Outline: User login - success page
