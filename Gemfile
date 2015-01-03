@@ -1,7 +1,8 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-gem 'capybara'
+gem 'watir-webdriver'
 gem 'cucumber'
-gem 'selenium-webdriver', '~> 2.40.0'
+gem 'selenium-webdriver'
 gem 'rake'
+gem 'rubyzip',  "~> 0.9.9"

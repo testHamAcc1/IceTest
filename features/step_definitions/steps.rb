@@ -1,32 +1,21 @@
 Given(/^User lands on homepage$/) do
-  visit('C:\Users\IEUser\Documents\git_workspace\html\index.html')
-  page.has_xpath?("html/body/form/center/input[2]")
+  @browser.goto('file://C:\Users\IEUser\Documents\git_workspace\html\index.html')
+  # page.has_xpath?("html/body/form/center/input[2]")
 end
 
 When(/^User fills in <username> and <password>$/) do
-  find(:xpath, "html/body/form/center/input[1]").set username
-  find(:xpath, "html/body/form/center/input[2]").set password
+  @browser.text_field(:name => 'username').set username
+  @browser.text_field(:name => 'password').set password
 end
 
 When(/^User fills in "(.*?)" and "(.*?)"$/) do |username, password|
-  find(:xpath, "html/body/form/center/input[1]").set username
-  find(:xpath, "html/body/form/center/input[2]").set password
-end
-
-
-When(/^User fills in <"(.*?)"> and <"(.*?)">$/) do |username, password|
-  find(:xpath, "html/body/form/center/input[1]").set username
-  find(:xpath, "html/body/form/center/input[2]").set password
+  @browser.text_field(:name => 'username').set username
+  @browser.text_field(:name => 'password').set password
 end
 
 
 When(/^User presses login$/) do
-  click_button('Login')
-  page.driver.browser.switch_to.alert.accept
-end
-
-Then(/^User is directed to success page$/) do
-    page.has_content?('You have successfully entered a correct username and password')  
+  @browser.button(:value => 'Login')
 end
 
 When(/^the time is "(.*?)"$/) do |time|
@@ -34,9 +23,6 @@ When(/^the time is "(.*?)"$/) do |time|
   puts @abc
 end
 
-# Given 'the time is $time' do |time|
-#   Timecop.freeze Time.parse(time)
-# end
 
 Given /^I time travel to (.+)$/ do |period|
   Delorean.time_travel_to(period)

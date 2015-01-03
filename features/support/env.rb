@@ -1,12 +1,3 @@
-require 'capybara'
-require 'capybara/cucumber'
+require 'watir-webdriver'
 
-
-Before do
-  Capybara.register_driver :selenium_firefox do |app|
-    Capybara::Selenium::Driver.new(app, :browser => :firefox)
-  end
-  Capybara.default_driver = :selenium_firefox
-  #Capybara.app_host = 'file:///Users/hamzarazzak/Desktop/index.html'
-end
-
+# browser.goto "C:\Users\IEUser\Documents\git_workspace\html\index.html"
