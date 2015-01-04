@@ -5,4 +5,3 @@ gem 'watir-webdriver'
 gem 'cucumber'
 gem 'selenium-webdriver'
 gem 'rake'
-gem 'rubyzip',  "~> 0.9.9"
