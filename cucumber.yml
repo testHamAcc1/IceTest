@@ -1,3 +1,3 @@
-default:  --no-source --format pretty --tags ~@not_ready
-slow:  --no-source --format pretty --tags @slow --tags ~@not_ready
+default:  --no-source --format pretty --format json --out=results/test_report.json
+slow:  --no-source --format pretty --tags @slow --format json --out=results/test_report.json
 fast:  --no-source --format pretty --tags @~slow, ~@not_ready
